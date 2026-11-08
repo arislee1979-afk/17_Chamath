@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamath Palihapitiya 深度專題研析目錄 ｜ L1 知識庫</title>
+  <meta name="description" content="Chamath Palihapitiya 完整研究專題目錄：涵蓋發跡紀錄片、與黃仁勳交鋒算力債務、與馬斯克對談硬體霸權、四兆美元數據中心凍結與五十歲自白作業系統。">
+  <style>
+    :root {
+      --bg-primary: #FAF9F5;
+      --bg-card: #FFFFFF;
+      --bg-card-subtle: #F6F4EE;
+      --bg-code: #F0EDE4;
+      --text-primary: #2D2B28;
+      --text-secondary: #635F57;
+      --text-muted: #8E8980;
+      --border-color: #E6E2D8;
+      --border-subtle: #EDEAE1;
+      --accent-terracotta: #C96442;
+      --accent-terracotta-light: #FBF2EF;
+      --accent-amber: #D97706;
+      --accent-amber-light: #FEF3C7;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.84;
+      font-size: 16.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .top-banner {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .top-banner-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .banner-brand {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--accent-terracotta);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .banner-brand span {
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 14px;
+      border-left: 1px solid var(--border-color);
+      padding-left: 10px;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 40px auto 32px auto;
+      padding: 0 24px;
+    }
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 44px 48px;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-terracotta-light);
+      color: var(--accent-terracotta);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    h1.hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #1A1917;
+      line-height: 1.35;
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+    p.hero-desc {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .content-container {
+      max-width: 1100px;
+      margin: 0 auto 80px auto;
+      padding: 0 24px;
+    }
+    .chapter-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .chapter-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .chapter-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      border-color: var(--accent-terracotta);
+    }
+    .chapter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chapter-tag {
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: var(--bg-card-subtle);
+      color: var(--accent-terracotta);
+      border: 1px solid var(--border-color);
+    }
+    .chapter-date {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    h2.chapter-title {
+      font-size: 21px;
+      font-weight: 700;
+      color: #1A1917;
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+    p.chapter-summary {
+      font-size: 15.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .chapter-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13.5px;
+      color: var(--accent-terracotta);
+      font-weight: 600;
+    }
+
+    footer.site-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-muted);
+      background: #FFFFFF;
+    }
+    footer.site-footer a {
+      color: var(--accent-terracotta);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-card { padding: 28px 24px; }
+      h1.hero-title { font-size: 25px; }
+      .chapter-card { padding: 24px 20px; }
+      h2.chapter-title { font-size: 18.5px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-banner">
+    <div class="top-banner-inner">
+      <a href="index.html" class="banner-brand">
+        🎙️ Chamath Palihapitiya 專案 <span>研究總目錄</span>
+      </a>
+      <div class="banner-meta">
+        <span>GitHub Pages 官方發布</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-container">
+    <div class="hero-card">
+      <div class="hero-badge">All-In Podcast & Capital Ops L1 Series</div>
+      <h1 class="hero-title">Chamath Palihapitiya 專題研析目錄</h1>
+      <p class="hero-desc">
+        本專案深入解構矽谷最具爭議與影響力的投資家之一 —— <strong>Chamath Palihapitiya</strong>。從移民貧童、AOL 與 Facebook 增長駭客、SPAC 之王，到與黃仁勳交鋒 AI 算力信貸風險、與馬斯克激辯硬體實體高牆與模型道德暗門，乃至 50 歲自白的人生管理系統與五層資本架構，提供完整跨片交叉對照的 Level 1 深度研究成果。
+      </p>
+    </div>
+  </section>
+
+  <main class="content-container">
+    <div class="chapter-list">
+
+      <!-- Chapter 01 -->
+      <a href="01_Chamath_Palihapitiya_獨裁者億萬富豪的發跡與爭議-L1.html" class="chapter-card">
+        <div class="chapter-header">
+          <span class="chapter-tag">專題 01 ｜ 人物發跡與爭議</span>
+          <span class="chapter-date">2026-11-08 發布</span>
+        </div>
+        <h2 class="chapter-title">從漢堡王打工仔到矽谷「獨裁者」億萬富豪：Chamath Palihapitiya 的發跡密碼、SPAC 狂潮與冷血真話</h2>
+        <p class="chapter-summary">
+          解剖從斯里蘭卡難民貧童到 26 歲 AOL 最年輕 VP、在 Facebook 提煉出「10 天內交到 7 個朋友」成長北極星、發起 14 檔 SPAC 淨賺 4 億美元的致富槓桿，以及面對人權爭議的大實話與創立 8090 軟體工廠的二次進擊。
+        </p>
+        <div class="chapter-footer">
+          <span>閱讀全文 ➔</span>
+        </div>
+      </a>
+
+      <!-- Chapter 02 -->
+      <a href="02_Chamath_與黃仁勳交鋒_CoreWeave算力黑盒子與美債阿基里斯腱-L1.html" class="chapter-card">
+        <div class="chapter-header">
+          <span class="chapter-tag">專題 02 ｜ 算力信貸與美債風暴</span>
+          <span class="chapter-date">2026-11-08 發布</span>
+        </div>
+        <h2 class="chapter-title">當全球最搶手的晶片租給「擲硬幣賭違約」的二房東：Chamath 與黃仁勳隔空交鋒 AI 算力債務與美債阿基里斯腱</h2>
+        <p class="chapter-summary">
+          揭開 CoreWeave「The Box」融資架構的定時炸彈：CDS 違約率高達 60%、借款成本衝上 15%、客戶集中度 75% 與損益兩平 50 億緩衝。對照黃仁勳 63 億美元包銷協議，以及決定 AI 繁榮生死的 10 年期美債 6% 阿基里斯腱。
+        </p>
+        <div class="chapter-footer">
+          <span>閱讀全文 ➔</span>
+        </div>
+      </a>
+
+      <!-- Chapter 03 -->
+      <a href="03_Chamath_與馬斯克對談_軟體IP歸零與AI道德暗門危機-L1.html" class="chapter-card">
+        <div class="chapter-header">
+          <span class="chapter-tag">專題 03 ｜ 軟硬體霸權與模型暗門</span>
+          <span class="chapter-date">2026-11-08 發布</span>
+        </div>
+        <h2 class="chapter-title">當軟體 IP 價值一夕歸零、AI 學會「良心拒服」：Chamath 與馬斯克對談硬體霸權與模型道德暗門</h2>
+        <p class="chapter-summary">
+          Chamath 宣告「軟體 IP 價值徹底歸零」，馬斯克構築自建晶圓廠與千萬人形機器人的物理高牆。深度剖析 Anthropic 神學家會議、Claude 憲法良心拒服，與 Chamath 示警銀行審批系統踩空停機的「道德暗門（Trapdoor）」危機。
+        </p>
+        <div class="chapter-footer">
+          <span>閱讀全文 ➔</span>
+        </div>
+      </a>
+
+      <!-- Chapter 04 -->
+      <a href="04_Chamath_數據中心凍結與算力造王者賽局_兼評AI摘要網站與原片研究價值-L1.html" class="chapter-card">
+        <div class="chapter-header">
+          <span class="chapter-tag">專題 04 ｜ 算力造王者賽局 ＆ 研究法</span>
+          <span class="chapter-date">2026-11-08 發布</span>
+        </div>
+        <h2 class="chapter-title">當數據中心審批凍結、算力巨頭化身「造王者」：Chamath 解構四兆美元 AI 拋售與 SpaceX 合約殺招（兼評：有了 BigGo 摘要網站，還需要自己研究原片嗎？）</h2>
+        <p class="chapter-summary">
+          從亞利桑那州科奇斯郡聽證會咆哮事件出發，拆解 2028 年 45GW 供電落差與爛尾機房危機；分析雲端巨頭「造王者」三條路（SpaceX 90 天解約核彈）；並實測比對 BigGo Finance 摘要工具，提出聰明的三步研究法。
+        </p>
+        <div class="chapter-footer">
+          <span>閱讀全文 ➔</span>
+        </div>
+      </a>
+
+      <!-- Chapter 05 -->
+      <a href="05_Chamath_50歲自白_頂尖0.01%生存法則與AI人生作業系統-L1.html" class="chapter-card">
+        <div class="chapter-header">
+          <span class="chapter-tag">專題 05 ｜ 五十歲自白與 AI 作業系統</span>
+          <span class="chapter-date">2026-11-08 發布</span>
+        </div>
+        <h2 class="chapter-title">五十歲的自白與傷疤：Chamath Palihapitiya 談頂尖 0.01% 的生存真相、15 分鐘人生紀律與他的 AI 決策系統</h2>
+        <p class="chapter-summary">
+          整合 Chamath 官方個人頻道自白四部曲：頂尖 0.01% 的折磨與誠實、破除零和焦慮、15 分鐘作息表與家庭鐵律；自製 5 大 AI 代理（納許談判、心理濾鏡、現金流模擬、長壽健康、正反互搏）；以及把資本直接塞給建造者的五層配置論。
+        </p>
+        <div class="chapter-footer">
+          <span>閱讀全文 ➔</span>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Chamath Research Project ｜ All-In Podcast & Capital Ops L1 Knowledge Base</p>
+    <p style="margin-top: 8px;">
+      <a href="https://github.com/arislee1979-afk/17_Chamath" target="_blank">GitHub Repository (arislee1979-afk/17_Chamath)</a>
+    </p>
+  </footer>
+</body>
+</html>
